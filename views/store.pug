@@ -1,0 +1,23 @@
+extends layout
+
+block layout-content
+	script(src="allstores.js")
+	script(src="store1.js")
+	div#map
+	div#rightside
+		div#topFrame
+			h1 FRUIT PICKER v1.0.0
+		div#bottomFrame
+			div(class="spacer")
+				a(class="option col2", href="index.htm") Go Back
+			p#namestore
+			a(class="option col1", href="check.htm", onclick="return thingie('iphone', this);") iPhone 13
+			a(class="option col6", href="check.htm", onclick="return thingie('iphold', this);") iPhone SE/11/12
+			a(class="option col5", href="check.htm", onclick="return thingie('ipad', this);") iPad
+			a(class="option col4", href="check.htm", onclick="return thingie('mac', this);") Mac
+			a(class="option col3 spacer", href="check.htm", onclick="return thingie('other', this);") Other
+			br
+			br
+			div#neareststores
+	script(src="store2.js")
+	script(src="common.js")

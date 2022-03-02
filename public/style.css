@@ -1,0 +1,141 @@
+html,
+body {
+	font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	font-size: 10pt;
+	margin: 0;
+	padding: 0;
+	background-color: #d3d3d3;
+}
+
+#hideul li {
+	display: none;
+}
+
+#map {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 360px;
+	right: 370px;
+	bottom: 0px;
+}
+
+#rightside {
+	position: absolute;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	top: 0px;
+	bottom: 15px;
+	right: 0px;
+	width: 350px;
+	width: 360px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+h1 {
+	color: #000;
+	text-decoration: none;
+	font-size: 22pt;
+	letter-spacing: 2px;
+	font-weight: 200;
+	display: inline-block;
+	margin:0;
+}
+
+.spacer {
+	margin-bottom:3em;
+}
+
+p {
+	text-align:center;
+	font-size:120%;
+	font-weight:bold;
+}
+
+#namestore {
+	font-size:175%;
+	font-weight:bold;
+}
+
+.storename {
+	text-align:center;
+}
+
+a:link {
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+#topFrame {
+	position: fixed;
+	top: 0;
+	padding-top: 5px;
+	width: 370px;
+	background-color: #e0e0e0;
+	z-index: 10;
+}
+
+#bottomFrame {
+	width: 340px;
+	top: 60px;
+	position: relative;
+	padding-left:8px;
+}
+
+.option {
+	display:block;
+	border: 8px ridge #000;
+	padding:15px;
+	font-size:150%;
+	font-weight:bold;
+	margin:0.5em auto 0.5em auto;
+	border-radius:20px;
+	text-align:center;
+	color: #fff;
+	background-image: linear-gradient(#3a9ddf, #1d75af);
+}
+
+.col1 {
+	color: #000;
+	background-image: linear-gradient(#33cc33, #248f24);
+}
+
+.col2 {
+	color: #000;
+	background-image: linear-gradient(#cccccc, #a6a6a6);
+}
+
+.col3 {
+	color: #000;
+	background-image: linear-gradient(#e6e600, #b3b300);
+}
+
+.col4 {
+	color: #000;
+	background-image: linear-gradient(#ff00ff, #990099);
+}
+
+.col5 {
+	color: #000;
+	background-image: linear-gradient(#8487cf, #474bb8);
+}
+
+.col6 {
+	color: #000;
+	background-image: linear-gradient(#FF8000, #994d00);
+}
+
+input {
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+span {
+	line-height:1.5em;
+	font-size:85%;
+}

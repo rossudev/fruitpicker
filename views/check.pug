@@ -1,0 +1,22 @@
+extends layout
+
+block layout-content
+	script(src="check1.js")
+	script(src="allstores.js")
+	div#map
+	div#rightside
+		div#topFrame
+			h1 FRUIT PICKER v1.0.0
+		div#bottomFrame
+			div
+				a(class="option col2 spacer", href="store.htm") Go Back
+				div(class="storename")
+					a(id="namestore", href=storeurlchk, target="_blank") Store Name
+			p(class="thing spacer") #{addresschk}, #{citychk}, #{statechk} #{zipchk}
+			p(class="thing")#thingname
+			div !{invcheck}
+			br
+			br
+			div#neareststores
+	script(src="check2.js")
+	script(src="common.js")
