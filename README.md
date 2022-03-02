@@ -1,4 +1,5 @@
-# fruitpicker
+# Fruit Picker v1.0.1
+# node.js web application
 
 This web application shows current availability for certain products at Apple stores in the United States.
 
