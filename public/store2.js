@@ -1,7 +1,7 @@
-'use strict';
-
 initMap();
 
-var newStore = getCookie('storename');
-var elem = document.querySelector('#namestore');
+let newStore = getCookie('storename');
+const elem = document.querySelector('#namestore');
 elem.innerText = "Apple " + newStore;
+
+const whatpage = false;
