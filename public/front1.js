@@ -1,6 +1,5 @@
 "use strict";
-
-var map = void 0;
+let map;
 
 function initMap() {
 	map = new google.maps.Map(document.getElementById("map"), {
