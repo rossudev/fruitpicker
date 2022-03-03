@@ -1,7 +1,7 @@
 # Fruit Picker v1.0.4
 # A node.js web application
 
-This web application shows current availability for certain products at Apple stores in the United States.
+This app shows current availability for certain products at Apple stores in the United States.
 
 Run `npm install` to load this project's dependencies.
 Run `node index.js` to start the web server.
