@@ -101,12 +101,12 @@ app.get('/check.htm', function(req, res) {
 	}
 	if ( itempick === "iphold" ) {
 		skuList = {
-			['MHGF3LL/A']: 'iPhone SE, 64GB, White',
+/* 			['MHGF3LL/A']: 'iPhone SE, 64GB, White',
 			['MHGE3LL/A']: 'iPhone SE, 64GB, Black',
 			['MHGG3LL/A']: 'iPhone SE, 64GB, Red',
 			['MHGJ3LL/A']: 'iPhone SE, 128GB, White',
 			['MHGH3LL/A']: 'iPhone SE, 128GB, Black',
-			['MHGK3LL/A']: 'iPhone SE, 128GB, Red',
+			['MHGK3LL/A']: 'iPhone SE, 128GB, Red', */
 			['MHCV3LL/A']: 'iPhone 11, 64GB, Purple',
 			['MHCU3LL/A']: 'iPhone 11, 64GB, Yellow',
 			['MHCW3LL/A']: 'iPhone 11, 64GB, Green',
@@ -183,7 +183,7 @@ app.get('/check.htm', function(req, res) {
 			['MLX93LL/A']: 'iPad Mini, 256GB, Wi-Fi/Cellular, Pink',
 			['MK8K3LL/A']: 'iPad Mini, 256GB, Wi-Fi/Cellular, Purple',
 			['MK8H3LL/A']: 'iPad Mini, 256GB, Wi-Fi/Cellular, Starlight',
-			['MYFM2LL/A']: 'iPad Air, 64GB, Wi-Fi, Space Gray',
+/* 			['MYFM2LL/A']: 'iPad Air, 64GB, Wi-Fi, Space Gray',
 			['MYFN2LL/A']: 'iPad Air, 64GB, Wi-Fi, Silver',
 			['MYFR2LL/A']: 'iPad Air, 64GB, Wi-Fi, Green',
 			['MYFP2LL/A']: 'iPad Air, 64GB, Wi-Fi, Rose Gold',
@@ -202,7 +202,7 @@ app.get('/check.htm', function(req, res) {
 			['MYJ42LL/A']: 'iPad Air, 256GB, Wi-Fi/Cellular, Silver',
 			['MYJ72LL/A']: 'iPad Air, 256GB, Wi-Fi/Cellular, Green',
 			['MYJ62LL/A']: 'iPad Air, 256GB, Wi-Fi/Cellular, Sky Blue',
-			['MYJ52LL/A']: 'iPad Air, 256GB, Wi-Fi/Cellular, Rose Gold',
+			['MYJ52LL/A']: 'iPad Air, 256GB, Wi-Fi/Cellular, Rose Gold', */
 			['MHQR3LL/A']: 'iPad Pro 11", 128GB, Wi-Fi, Space Gray',
 			['MHQT3LL/A']: 'iPad Pro 11", 128GB, Wi-Fi, Silver',
 			['MHQU3LL/A']: 'iPad Pro 11", 256GB, Wi-Fi, Space Gray',
@@ -253,6 +253,10 @@ app.get('/check.htm', function(req, res) {
 			['MGN73LL/A']: '13" MBA, 512GB, Space Gray',
 			['MGNA3LL/A']: '13" MBA, 512GB, Gold',
 			['MGNE3LL/A']: '13" MBA, 512GB, Silver',
+			['MYD82LL/A']: '13" MBP, 256GB, Space Gray',
+			['MYDA2LL/A']: '13" MBP, 256GB, Silver',
+			['MYD92LL/A']: '13" MBP, 512GB, Space Gray',
+			['MYDC2LL/A']: '13" MBP, 512GB, Silver',
 			['MKGR3LL/A']: '14" MBP, M1 Pro, 8/14 Cores, 512GB/16GB, Silver',
 			['MKGP3LL/A']: '14" MBP, M1 Pro, 8/14 Cores, 512GB/16GB, Space Gray',
 			['MKGT3LL/A']: '14" MBP, M1 Pro, 10/16 Cores, 1TB/16GB, Silver',
