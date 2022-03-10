@@ -1,4 +1,6 @@
 const configURL = "https://maps.googleapis.com/maps/api/js?key=";
+const portpick = 8081;
+const fruitversion = "v1.0.5";
 
 const express = require('express');
 const cookieParser = require('cookie-parser')
@@ -14,15 +16,15 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 app.get('/', function(req, res) {   
-	res.render("index", { layoutgmaps: configURL });
+	res.render("index", { versionfruit: fruitversion, layoutgmaps: configURL });
 })
 
 app.get('/index.htm', function(req, res) {   
-	res.render("index", { layoutgmaps: configURL });
+	res.render("index", { versionfruit: fruitversion, layoutgmaps: configURL });
 })
 
 app.get('/store.htm', function(req, res) {   
-	res.render("store", { layoutgmaps: configURL });
+	res.render("store", { versionfruit: fruitversion, layoutgmaps: configURL });
 })
 
 let skuList = {['a']: 'b'};
@@ -247,26 +249,26 @@ app.get('/check.htm', function(req, res) {
 	}
 	if ( itempick === "mac" ) {
 		skuList = {
-			['MGN63LL/A']: '13" MBA, 256GB, Space Gray',
-			['MGN93LL/A']: '13" MBA, 256GB, Gold',
-			['MGND3LL/A']: '13" MBA, 256GB, Silver',
-			['MGN73LL/A']: '13" MBA, 512GB, Space Gray',
-			['MGNA3LL/A']: '13" MBA, 512GB, Gold',
-			['MGNE3LL/A']: '13" MBA, 512GB, Silver',
-			['MYD82LL/A']: '13" MBP, 256GB, Space Gray',
-			['MYDA2LL/A']: '13" MBP, 256GB, Silver',
-			['MYD92LL/A']: '13" MBP, 512GB, Space Gray',
-			['MYDC2LL/A']: '13" MBP, 512GB, Silver',
-			['MKGR3LL/A']: '14" MBP, M1 Pro, 8/14 Cores, 512GB/16GB, Silver',
-			['MKGP3LL/A']: '14" MBP, M1 Pro, 8/14 Cores, 512GB/16GB, Space Gray',
-			['MKGT3LL/A']: '14" MBP, M1 Pro, 10/16 Cores, 1TB/16GB, Silver',
-			['MKGQ3LL/A']: '14" MBP, M1 Pro, 10/16 Cores, 1TB/16GB, Space Gray',
-			['MK1E3LL/A']: '16" MBP, M1 Pro, 10/16 Cores, 512GB/16GB, Silver',
-			['MK183LL/A']: '16" MBP, M1 Pro, 10/16 Cores, 512GB/16GB, Space Gray',
-			['MK1F3LL/A']: '16" MBP, M1 Pro, 10/16 Cores, 1TB/16GB, Silver',
-			['MK193LL/A']: '16" MBP, M1 Pro, 10/16 Cores, 1TB/16GB, Space Gray',
-			['MK1H3LL/A']: '16" MBP, M1 Max, 10/32 Cores, 1TB/32GB, Silver',
-			['MK1A3LL/A']: '16" MBP, M1 Max, 10/32 Cores, 1TB/32GB, Space Gray',
+			['MGN63LL/A']: '13" MB Air 256GB, Space Gray',
+			['MGN93LL/A']: '13" MB Air 256GB, Gold',
+			['MGND3LL/A']: '13" MB Air 256GB, Silver',
+			['MGN73LL/A']: '13" MB Air 512GB, Space Gray',
+			['MGNA3LL/A']: '13" MB Air 512GB, Gold',
+			['MGNE3LL/A']: '13" MB Air 512GB, Silver',
+			['MYD82LL/A']: '13" MB Pro 256GB, Space Gray',
+			['MYDA2LL/A']: '13" MB Pro 256GB, Silver',
+			['MYD92LL/A']: '13" MB Pro 512GB, Space Gray',
+			['MYDC2LL/A']: '13" MB Pro 512GB, Silver',
+			['MKGR3LL/A']: '14" MB Pro M1 Pro, 8/14 Cores, 512GB/16GB, Silver',
+			['MKGP3LL/A']: '14" MB Pro M1 Pro, 8/14 Cores, 512GB/16GB, Space Gray',
+			['MKGT3LL/A']: '14" MB Pro M1 Pro, 10/16 Cores, 1TB/16GB, Silver',
+			['MKGQ3LL/A']: '14" MB Pro M1 Pro, 10/16 Cores, 1TB/16GB, Space Gray',
+			['MK1E3LL/A']: '16" MB Pro M1 Pro, 10/16 Cores, 512GB/16GB, Silver',
+			['MK183LL/A']: '16" MB Pro M1 Pro, 10/16 Cores, 512GB/16GB, Space Gray',
+			['MK1F3LL/A']: '16" MB Pro M1 Pro, 10/16 Cores, 1TB/16GB, Silver',
+			['MK193LL/A']: '16" MB Pro M1 Pro, 10/16 Cores, 1TB/16GB, Space Gray',
+			['MK1H3LL/A']: '16" MB Pro M1 Max, 10/32 Cores, 1TB/32GB, Silver',
+			['MK1A3LL/A']: '16" MB Pro M1 Max, 10/32 Cores, 1TB/32GB, Space Gray',
 			['MGNR3LL/A']: 'Mac Mini, 256GB/8GB',
 			['MGNT3LL/A']: 'Mac Mini, 512GB/8GB',
 			['MJV93LL/A']: '24" iMac, 8/7 Cores, 256GB/8GB, Blue',
@@ -285,6 +287,12 @@ app.get('/check.htm', function(req, res) {
 	}
 	if ( itempick === "other" ) {
 		skuList = {
+			['MK0U3LL/A']: 'Studio Display, standard glass, tilt-adjustable',
+			['MK0Q3LL/A']: 'Studio Display, standard glass, tilt-and height-adjustable',
+			['MMYQ3LL/A']: 'Studio Display, standard glass, VESA mount adapter',
+			['MMYW3LL/A']: 'Studio Display, nano-texture glass, tilt-adjustable',
+			['MMYV3LL/A']: 'Studio Display, nano-texture glass, tilt-and height-adjustable',
+			['MMYX3LL/A']: 'Studio Display, nano-texture glass, VESA mount adapter',
 			['MV7N2AM/A']: 'AirPods 2nd Gen',
 			['MME73AM/A']: 'AirPods 3rd Gen',
 			['MLWK3AM/A']: 'AirPods Pro',
@@ -310,7 +318,6 @@ app.get('/check.htm', function(req, res) {
 		}
 	}
 
-	const control = "MYD92LL/A";
 	let storeNumber = req.cookies.storenum;
 
 	const query =
@@ -345,16 +352,21 @@ app.get('/check.htm', function(req, res) {
 			zip = store.address.postalCode;
 			
 			for (const [key, value] of Object.entries(skuList)) {
-				const product = store.partsAvailability[key];
-				if (product.pickupDisplay === "available") {
-					checkstr = checkstr.concat("<span style='color:green;font-weight:bold;'>", `${value}`, "</span><br/>");
-				} else {
-					checkstr = checkstr.concat("<span style='color:red'>", `${value}`, "</span><br/>");
+				try {
+					const product = store.partsAvailability[key];
+					if (product.pickupDisplay === "available") {
+						checkstr = checkstr.concat("<span style='color:green;font-weight:bold;'>", `${value}`, "</span><br/>");
+					} else {
+						checkstr = checkstr.concat("<span style='color:red'>", `${value}`, "</span><br/>");
+					};
+				} catch (e) {
+					checkstr = checkstr.concat("<span style='color:gray'>", `${value}`, "</span><br/>");
 				};
 			};
 		});
 		
 		res.render("check", { 
+			versionfruit: fruitversion, 
 			layoutgmaps: configURL, 
 			invcheck: checkstr, 
 			citychk: city, 
@@ -366,7 +378,7 @@ app.get('/check.htm', function(req, res) {
 	});
 });
 
-let server = app.listen(8081, function () {
+let server = app.listen(portpick, function () {
 	let host = server.address().address
 	let port = server.address().port
 
