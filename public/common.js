@@ -1,14 +1,21 @@
 let newStore = getCookie('storename');
+let newLoc = getCookie('storeloc');
 const elem = document.querySelector('#namestore');
 
 let apptxt = "";
+let aftertxt = "";
+
 if ( newStore === "Apple Park Visitor Center" ) {
 	apptxt = "";
 } else {
 	apptxt = "Apple ";
 };
 
-elem.innerText = apptxt + newStore;
+if ( !whatpage ) {
+	aftertxt = newLoc;
+};
+
+elem.innerText = apptxt.concat( newStore, ", ", aftertxt );
 
 [ ['store1', "mi1"], ['store2', "mi2"], ['store3', "mi3"], ['store4', "mi4"], ['store5', "mi5"] ].forEach(function(lookStore) {
 	let result = 0;
@@ -36,6 +43,7 @@ elem.innerText = apptxt + newStore;
 	let mil3 = allStores[result][11];
 	let mil4 = allStores[result][12];
 	let mil5 = allStores[result][13];
+	let loc = allStores[result][14];
 	
 	let anc = document.createElement('a');
 	anc.setAttribute("class", "option");
@@ -72,6 +80,8 @@ elem.innerText = apptxt + newStore;
 		mil5, 
 		", \"",
 		rowName,
+		"\", \"",
+		loc,
 		"\" );"
 	);
 	

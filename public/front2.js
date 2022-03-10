@@ -17,6 +17,8 @@ for (let h = 0; h < allStores.length; h++) {
 	let mile3 = rowStore[11];
 	let mile4 = rowStore[12];
 	let mile5 = rowStore[13];
+	let storeLoc = rowStore[14];
+	let longName = rowName.concat( ", ", storeLoc );
 	
 	let li = document.createElement('li');
 	ul.appendChild(li);
@@ -52,10 +54,12 @@ for (let h = 0; h < allStores.length; h++) {
 		mile5, 
 		", \"",
 		rowName,
+		"\", \"",
+		storeLoc,
 		"\" );"
 	);
 	anc.setAttribute("onClick", onclicky);
-	anc.appendChild(document.createTextNode(rowName));
+	anc.appendChild(document.createTextNode(longName));
 	li.appendChild(anc);
 };
 
