@@ -1,8 +1,8 @@
 {
 	"name": "fruitpicker",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Apple Inventory Checker with Web Interface, for stores in the United States",
-	"main": "index.js",
+	"main": "./dist/index.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/rossuber/fruitpicker"
@@ -12,6 +12,9 @@
 		"inventory",
 		"checker"
 	],
+	"scripts": {
+		"start": "node ."
+	},
 	"dependencies": {
 		"array.prototype.flatmap": "^1.2.5",
 		"body-parser": "^1.19.2",
