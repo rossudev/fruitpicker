@@ -6,17 +6,22 @@ block layout-content
 	div#map
 	div#rightside
 		div#topFrame
-			h1 FRUIT PICKER v1.0.4
+			h1 FRUIT PICKER #{versionfruit}
 		div#bottomFrame
 			div
 				a(class="option col2 spacer", href="store.htm") Go Back
 				div(class="storename")
 					a(id="namestore", href=storeurlchk, target="_blank") Store Name
-			p(class="thing spacer") #{addresschk}, #{citychk}, #{statechk} #{zipchk}
-			p(class="thing")#thingname
-			div !{invcheck}
-			br
-			br
+			p(class="thing") #{addresschk}, #{citychk}, #{statechk} #{zipchk}
+			div(class="box spacer")
+				p(class="thing")#thingname
+				table(class="box")
+					tr
+						td(class="key key1 box") Available
+						td(class="key key2 box") Unavailable
+						td(class="key key3 box") Unknown
+				br
+				div !{invcheck}
 			div#neareststores
 	script(src="check2.js")
 	script(src="common.js")
