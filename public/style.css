@@ -90,7 +90,7 @@ a:hover {
 
 .option {
 	display:block;
-	border: 8px ridge #000;
+	border: 4px ridge #006600;
 	padding:15px;
 	font-size:150%;
 	font-weight:bold;
@@ -138,4 +138,26 @@ input {
 span {
 	line-height:1.5em;
 	font-size:85%;
+}
+
+.key {
+	font-weight:bold;
+}
+
+.key1 {
+	color: green;
+}
+
+.key2 {
+	color: red;
+}
+
+.key3 {
+	color: gray;
+}
+
+.box {
+	border:1px solid gray;
+	margin:0 auto 0 auto;
+	padding:5px;
 }
