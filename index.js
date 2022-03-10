@@ -1,6 +1,10 @@
 const configURL = "https://maps.googleapis.com/maps/api/js?key=";
-const portpick = 8081;
 const fruitversion = "v1.0.5";
+
+let portx = process.env.PORT;
+if (portx == null || portx == "") {
+  portx = 8000;
+}
 
 const express = require('express');
 const cookieParser = require('cookie-parser')
@@ -378,7 +382,7 @@ app.get('/check.htm', function(req, res) {
 	});
 });
 
-let server = app.listen(portpick, function () {
+let server = app.listen(portx, function () {
 	let host = server.address().address
 	let port = server.address().port
 
