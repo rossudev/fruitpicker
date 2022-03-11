@@ -17,6 +17,33 @@ if ( !whatpage ) {
 
 elem.innerText = apptxt.concat( newStore, ", ", aftertxt );
 
+const icon = {
+	url: "favicon.png",
+	scaledSize: new google.maps.Size(50, 50),
+	origin: new google.maps.Point(0,0),
+	anchor: new google.maps.Point(25, 25)
+};
+
+function newMark(locate,nameit) {
+	const marker = new google.maps.Marker({
+		position: locate,
+		icon: icon,
+		map: map,
+		draggable: false,
+		title: nameit,
+		scaledSize: new google.maps.Size(10, 10)
+	});
+	
+	const infowindow = new google.maps.InfoWindow({
+		content: nameit,
+		maxWidth: 200,
+		disableAutoPan: true
+	});
+	
+	infowindow.open(map, marker);
+	return marker;
+};
+
 [ ['store1', "mi1"], ['store2', "mi2"], ['store3', "mi3"], ['store4', "mi4"], ['store5', "mi5"] ].forEach(function(lookStore) {
 	let result = 0;
 	let thisCook = getCookie(lookStore[0]);
@@ -91,4 +118,10 @@ elem.innerText = apptxt.concat( newStore, ", ", aftertxt );
 	anc.appendChild(document.createTextNode(thistext));
 	let thisdiv = document.getElementById("neareststores");
 	thisdiv.appendChild(anc);
+	
+	let locc = new google.maps.LatLng(rowLat, rowLon);
+	let markerhere = newMark(locc,rowName);
 });
+
+let newlocc = new google.maps.LatLng(parseFloat(newStLat), parseFloat(newStLon));
+newMark(newlocc, newStore);
