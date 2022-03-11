@@ -1,5 +1,5 @@
 const configURL = "https://maps.googleapis.com/maps/api/js?key=";
-const fruitversion = "v1.0.5";
+const fruitversion = "v1.0.6";
 
 let portx = process.env.PORT;
 if (portx == null || portx == "") {
