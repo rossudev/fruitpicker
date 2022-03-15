@@ -1,6 +1,6 @@
 {
 	"name": "fruitpicker",
-	"version": "1.0.5",
+	"version": "1.0.7",
 	"description": "Apple Inventory Checker with Web Interface, for stores in the United States",
 	"main": "index.js",
 	"repository": {
