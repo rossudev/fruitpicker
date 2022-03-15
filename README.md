@@ -7,7 +7,7 @@ This app shows current availability for certain products at Apple stores in the 
 Run `npm install` to load this project's dependencies.
 Run `node index.js` to start the web server.
 
-Navigate your browser to http://localhost:8081/
+Navigate your browser to http://localhost:8000/
 Type in a store name (e.g. "Downtown Brooklyn") and select the store.
 Select a product category to view current availability of products.
 The five closest Apple stores are also shown for easy navigation.
