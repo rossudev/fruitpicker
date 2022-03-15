@@ -13,7 +13,7 @@
 		"checker"
 	],
 	"scripts": {
-		"start": "node ."
+		"start": "node ./index.js"
 	},
 	"dependencies": {
 		"array.prototype.flatmap": "^1.2.5",
