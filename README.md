@@ -12,3 +12,5 @@ This app shows current availability for certain products at Apple stores in the 
 6. Select a product category to view current availability of products. The five closest Apple stores are also shown for easy navigation.
 
 If the Google Maps view does not load completely for you, edit Line 1 of index.js to include a valid key from https://cloud.google.com/maps-platform/ and enable the Maps Javascript API.
+
+A live environment for this app can be accessed at https://fruitinventory.herokuapp.com/
