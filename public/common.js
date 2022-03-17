@@ -12,10 +12,10 @@ if ( newStore === "Apple Park Visitor Center" ) {
 };
 
 if ( !whatpage ) {
-	aftertxt = newLoc;
+	aftertxt = " - " + newLoc;
 };
 
-elem.innerText = apptxt.concat( newStore, ", ", aftertxt );
+elem.innerText = apptxt.concat( newStore, aftertxt );
 
 const icon = {
 	url: "favicon.png",

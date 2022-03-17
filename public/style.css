@@ -7,6 +7,14 @@ body {
 	background-color: #d3d3d3;
 }
 
+a:link {
+	text-decoration:none;
+}
+
+a:hover, a:active {
+	text-decoration:underline;
+}
+
 #hideul li {
 	display: none;
 }
@@ -62,14 +70,6 @@ p {
 
 .storename {
 	text-align:center;
-}
-
-a:link {
-	text-decoration:none;
-}
-
-a:hover {
-	text-decoration:underline;
 }
 
 #topFrame {
@@ -135,13 +135,19 @@ input {
 	font-family: "Lucida Console", Monaco, monospace;
 }
 
-span {
+.allitems {
+	font-weight:bold;
 	line-height:1.5em;
 	font-size:85%;
 }
 
+.thing {
+	font-size:130%;
+}
+
 .key {
-	font-weight:bold;
+	text-align:center;
+	line-height:0.7em;
 }
 
 .key1 {
