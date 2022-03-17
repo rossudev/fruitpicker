@@ -1,8 +1,8 @@
 {
 	"name": "fruitpicker",
-	"version": "1.0.7",
+	"version": "1.0.9",
 	"description": "Apple Inventory Checker with Web Interface, for stores in the United States",
-	"main": "index.js",
+	"main": "./dist/index.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/rossuber/fruitpicker"
@@ -13,7 +13,7 @@
 		"checker"
 	],
 	"scripts": {
-		"start": "node ./index.js"
+		"start": "node ./dist/index.js"
 	},
 	"dependencies": {
 		"array.prototype.flatmap": "^1.2.5",
@@ -28,7 +28,7 @@
 		"node-notifier": "^10.0.1",
 		"pug": "^3.0.2",
 		"request": "^2.88.2",
-		"string.prototype.replaceall": "^1.0.6"
+		"sqlite3": "^5.0.2"
 	},
 	"author": "Ross Uber <rossuber@gmail.com>",
 	"license": "MIT",
