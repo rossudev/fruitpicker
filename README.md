@@ -1,4 +1,4 @@
-# Fruit Picker v1.0.7
+# Fruit Picker v1.0.9
 
 This app shows current availability for certain products at Apple stores in the United States.
 
