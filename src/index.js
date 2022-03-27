@@ -63,6 +63,7 @@ class App extends React.Component {
 		this.changeStore = (newRow) => {
 			this.setState( state => ({ storeRow: newRow, result: '' }) );
 			itemList.forEach(resetItem);
+			document.getElementById("myInput").scrollIntoView();
 		};
 
 		this.changeResult = (itemPick) => {
@@ -87,7 +88,7 @@ class App extends React.Component {
 	
 			myPromise.then(function(value) {
 				const timecheck = new Date().toLocaleString("en-US", { dateStyle: "short", timeStyle: "short" });
-				let checkstr = "<div className='box spacer allitems'><p className='thing'>Availability as of " + timecheck + "</p><table className='box key'><tr><td className='key1'>Available</td></tr><tr><td className='key2'>Unavailable</td></tr></table><br/><div>";
+				let checkstr = "<div className='box spacer allitems'><p className='asof'>Availability as of " + timecheck + "</p><table className='box key'><tr><td className='key1'>Available</td></tr><tr><td className='key2'>Unavailable</td></tr></table><br/><div>";
 				
 				const storesArray = value.data.body.content.pickupMessage.stores;
 				const statusArray = storesArray.flatMap((store) => {
@@ -108,6 +109,7 @@ class App extends React.Component {
 				itemList.forEach(resetItem);
 				checkstr = checkstr.concat("</div></div>");
 				this.setState( state => ({ result: checkstr, checking: false }) );
+				document.getElementById("myInput").scrollIntoView();
 			}.bind(this));
 		};
 	};
@@ -397,7 +399,6 @@ class CheckInventory extends React.Component {
 const resetItem = (item, index, arr) => {
 	const itemThis = document.getElementById(item[0]);
 	itemThis.setAttribute("style","font-size:16pt; padding:1em;");
-	document.getElementById("myInput").scrollIntoView();
 };
 
 ///////////////////////////////////////
