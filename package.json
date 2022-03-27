@@ -5,9 +5,6 @@
 		"node": "16.x"
 	},
 	"main": "./index.js",
-	"scripts": {
-		"start": "node ./index.js"
-	},
 	"description": "Apple Inventory Checker with Web Interface, for stores in the United States",
 	"repository": {
 		"type": "git",
@@ -31,7 +28,7 @@
 		"react-scripts": "5.0.0"
 	},
 	"scripts": {
-		"start": "react-scripts start",
+		"start": "node ./index.js"
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
