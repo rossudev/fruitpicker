@@ -15,7 +15,7 @@ const flatMap = require('array.prototype.flatmap');
 /////////// Config ////////////
 ///////////////////////////////
 
-const mapsKey = "";
+const mapsKey = "AIzaSyDH3HjD-8oLQlmJwJ61hNc7NzCTrl94QT4";
 const fruitversion = "v1.1.1";
 const itemList = [ 
 	["iphone", "iPhone 13", ], 
@@ -81,7 +81,7 @@ class App extends React.Component {
 				const whichStore = this.state.storeRow.storeID;
 				const query = Object.keys(skuList).map((k, i) => `parts.${i}=${encodeURIComponent(k)}`).join("&") + `&searchNearby=false&store=${whichStore}`;
 
-				let response = Axios.get('https://cors-anywhere.herokuapp.com/https://apple.com/shop/fulfillment-messages?' + query, { headers: { 'X-Requested-With': 'XMLHttpRequest' } });
+				let response = Axios.get('https://cors-fruit.herokuapp.com/https://apple.com/shop/fulfillment-messages?' + query, { headers: { 'X-Requested-With': 'XMLHttpRequest' } });
 
 				myResolve(response);
 			}.bind(this));
@@ -178,30 +178,6 @@ function newMark(item, index, arr) {
 		scaledSize: new google.maps.Size(10, 10)
 	});
 
-	const newProps = { 
-		storeID: item[0], 
-		latitude: item[1], 
-		longitude: item[2], 
-		name: item[3], 
-		st1: item[4], 
-		st2: item[5], 
-		st3: item[6], 
-		st4: item[7], 
-		st5: item[8], 
-		mi1: item[9], 
-		mi2: item[10], 
-		mi3: item[11], 
-		mi4: item[12], 
-		mi5: item[13], 
-		loc: item[14] 
-	};
-
-/* 	google.maps.event.addListener(marker, 'click', function(evt) {
-		changeMap(newProps);
-		document.getElementById("myForm").reset();
-		this.changeStore(newProps);
-	}); */
-
 	[ this[1].st1, this[1].st2, this[1].st3, this[1].st4, this[1].st5 ].forEach( awayStore => {
 		const newResult = awayStore === item[0] || this[1].storeID === item[0];
 		if ( newResult ) {
@@ -269,8 +245,6 @@ class StoreFind extends React.Component {
 					{allStores.length>0 && allStores.map(store =>
 						<li key={store[0]}><StoreButton 
 							storeID={store[0]} 
-							latitude={store[1]} 
-							longitude={store[2]} 
 							name={store[3]} 
 							loc={store[14]} 
 							changeStore={this.changeStore}
@@ -289,7 +263,7 @@ class StoreButton extends React.Component {
 	changeStore = this.props.changeStore;
 
 	render() {
-		const append = this.props.fromFind ? this.props.loc : this.props.miles.toString() + " miles";
+		const append = this.props.fromFind ? this.props.loc : "";
 		return (
 				<div key={this.props.storeID} className="option" onClick={() => {
 					if (!this.context.checking) {
