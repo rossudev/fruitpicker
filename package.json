@@ -4,6 +4,7 @@
 	"engines": {
 		"node": "16.x"
 	},
+	"main": "./index.js",
 	"description": "Apple Inventory Checker with Web Interface, for stores in the United States",
 	"repository": {
 		"type": "git",
