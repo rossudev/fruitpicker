@@ -178,6 +178,30 @@ function newMark(item, index, arr) {
 		scaledSize: new google.maps.Size(10, 10)
 	});
 
+	const newProps = { 
+		storeID: item[0], 
+		latitude: item[1], 
+		longitude: item[2], 
+		name: item[3], 
+		st1: item[4], 
+		st2: item[5], 
+		st3: item[6], 
+		st4: item[7], 
+		st5: item[8], 
+		mi1: item[9], 
+		mi2: item[10], 
+		mi3: item[11], 
+		mi4: item[12], 
+		mi5: item[13], 
+		loc: item[14] 
+	};
+
+/* 	google.maps.event.addListener(marker, 'click', function(evt) {
+		changeMap(newProps);
+		document.getElementById("myForm").reset();
+		this.changeStore(newProps);
+	}); */
+
 	[ this[1].st1, this[1].st2, this[1].st3, this[1].st4, this[1].st5 ].forEach( awayStore => {
 		const newResult = awayStore === item[0] || this[1].storeID === item[0];
 		if ( newResult ) {
@@ -245,7 +269,19 @@ class StoreFind extends React.Component {
 					{allStores.length>0 && allStores.map(store =>
 						<li key={store[0]}><StoreButton 
 							storeID={store[0]} 
+							latitude={store[1]} 
+							longitude={store[2]} 
 							name={store[3]} 
+							st1={store[4]} 
+							st2={store[5]} 
+							st3={store[6]} 
+							st4={store[7]} 
+							st5={store[8]} 
+							mi1={store[9]} 
+							mi2={store[10]} 
+							mi3={store[11]} 
+							mi4={store[12]} 
+							mi5={store[13]} 
 							loc={store[14]} 
 							changeStore={this.changeStore}
 							miles={0}
@@ -263,7 +299,7 @@ class StoreButton extends React.Component {
 	changeStore = this.props.changeStore;
 
 	render() {
-		const append = this.props.fromFind ? this.props.loc : "";
+		const append = this.props.fromFind ? ", " + this.props.loc : "";
 		return (
 				<div key={this.props.storeID} className="option" onClick={() => {
 					if (!this.context.checking) {
@@ -271,7 +307,7 @@ class StoreButton extends React.Component {
 						document.getElementById("myForm").reset();
 						this.changeStore(this.props);
 					};
-				}}><span>{this.props.name}, {append} </span></div>
+				}}><span>{this.props.name}{append} </span></div>
 		);
 	};
 };
@@ -392,6 +428,16 @@ class ClosestStores extends React.Component {
 							latitude={store[1]} 
 							longitude={store[2]} 
 							name={store[3]} 
+							st1={store[4]} 
+							st2={store[5]} 
+							st3={store[6]} 
+							st4={store[7]} 
+							st5={store[8]} 
+							mi1={store[9]} 
+							mi2={store[10]} 
+							mi3={store[11]} 
+							mi4={store[12]} 
+							mi5={store[13]} 
 							loc={store[14]} 
 							miles={store[15]}
 							changeStore={this.changeStore}
