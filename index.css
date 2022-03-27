@@ -1,0 +1,270 @@
+html,
+body {
+	font-size: 9pt;
+	margin: 0;
+	padding: 0;
+	background-color: #d3d3d3;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a:link {
+	text-decoration:none;
+}
+
+a:hover, a:active, .option:hover {
+	text-decoration:underline;
+}
+
+#hideul li {
+	display: none;
+}
+
+#map {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 360px;
+	right: 370px;
+	bottom: 0px;
+}
+
+#rightside {
+	position: absolute;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	top: 0px;
+	bottom: 15px;
+	right: 0px;
+	width: 350px;
+	width: 360px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+h1 {
+	color: #000;
+	text-decoration: none;
+	font-size: 21pt;
+	letter-spacing: 2px;
+	font-weight: bold;
+	display: inline-block;
+	margin:0;
+}
+
+.spacer {
+	margin-bottom:2em;
+}
+
+p {
+	font-size:10pt;
+	margin:0.5em;
+}
+
+#namestore {
+	font-size:28pt;
+	font-weight:bold;
+	color:#144422;
+}
+
+.storename {
+	text-align:center;
+}
+
+#topFrame {
+	position: fixed;
+	top: 0;
+	padding-top: 5px;
+	width: 370px;
+	background-color: #e0e0e0;
+	z-index: 10;
+}
+
+#bottomFrame {
+	width: 340px;
+	top: 60px;
+	position: relative;
+	padding-left:8px;
+}
+
+.option {
+	position: relative;
+	display:block;
+	border: 4px ridge #006600;
+	padding:1em;
+	font-size:14pt;
+	font-weight:bold;
+	margin:0.5em auto 0.5em auto;
+	border-radius:20px;
+	text-align:center;
+	color: #fff;
+	background-image: linear-gradient(#3a9ddf, #1d75af);
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	transition: all 0.5s;
+	text-decoration: none;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.option span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+  
+.option span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+  
+.option:hover span {
+	padding-right: 25px;
+}
+  
+.option:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.option:after {
+	content: "";
+	background: #90EE90;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px!important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s
+}
+
+.option:active:after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s
+}
+
+.visible {
+	display: block;	
+}
+
+.invisible {
+	display: none;	
+}
+
+/* CSS for animated bouncing loader. */
+.loader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  /* Loader circles */
+  .loader > span {
+	background: #000;
+	border-radius: 50%;
+	margin: 5rem 0.5rem;
+	animation: bouncingLoader 0.6s infinite alternate;
+  }
+  
+  .loader > span:nth-child(2) {
+	animation-delay: 0.2s;
+  }
+  
+  .loader > span:nth-child(3) {
+	animation-delay: 0.4s;
+  }
+  
+  /* Define the animation called bouncingLoader. */
+  @keyframes bouncingLoader {
+	from {
+	  width: 0.1rem;
+	  height: 0.1rem;
+	  opacity: 1;
+	  transform: translate3d(0);
+	}
+	to {
+	  width: 1rem;
+	  height: 1rem;
+	  opacity: 0.1;
+	  transform: translate3d(0, -1rem, 0);
+	}
+  }
+
+.iphone {
+	color: #000;
+	background-image: linear-gradient(#33cc33, #248f24);
+}
+
+.other {
+	color: #000;
+	background-image: linear-gradient(#e6e600, #b3b300);
+}
+
+.mac {
+	color: #000;
+	background-image: linear-gradient(#ff00ff, #990099);
+}
+
+.ipad {
+	color: #000;
+	background-image: linear-gradient(#8487cf, #474bb8);
+}
+
+.iphold {
+	color: #000;
+	background-image: linear-gradient(#FF8000, #994d00);
+}
+
+input {
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+.allitems {
+	font-weight:bold;
+	line-height:1.5em;
+	font-size:8pt;
+}
+
+.place {
+	font-size:10pt;
+}
+
+.key {
+	text-align:center;
+	line-height:0.7em;
+}
+
+.key1 {
+	color: green;
+}
+
+.key2 {
+	color: red;
+}
+
+.key3 {
+	color: gray;
+}
+
+.box {
+	border:1px solid gray;
+	margin:0 auto 0 auto;
+	padding:5px;
+}

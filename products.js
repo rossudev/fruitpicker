@@ -1,4 +1,4 @@
-skuFunc = function(pickitem) {
+export let skuFunc = function(pickitem) {
 	let skus = {['.']: [ '.', '.', '.' ]};
 	let precess = '';
 	if ( pickitem === "iphone" ) {
