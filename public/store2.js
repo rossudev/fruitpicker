@@ -1,2 +1,0 @@
-initMap();
-const whatpage = false;
