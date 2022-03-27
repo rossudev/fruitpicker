@@ -15,7 +15,7 @@ const flatMap = require('array.prototype.flatmap');
 /////////// Config ////////////
 ///////////////////////////////
 
-const mapsKey = "AIzaSyDH3HjD-8oLQlmJwJ61hNc7NzCTrl94QT4";
+const mapsKey = "";
 const fruitversion = "v1.1.1";
 const itemList = [ 
 	["iphone", "iPhone 13", ], 
