@@ -1,0 +1,2 @@
+initMap();
+const whatpage = false;
