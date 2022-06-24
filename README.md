@@ -1,4 +1,4 @@
-# Fruit Picker v1.1.1
+# Fruit Picker v1.1.2
 
 This app shows current availability for certain products at Apple stores in the United States. A live environment for this app can be accessed at https://fruitinventory.herokuapp.com/
 
