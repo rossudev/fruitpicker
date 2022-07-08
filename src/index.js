@@ -15,8 +15,8 @@ const flatMap = require('array.prototype.flatmap');
 /////////// Config ////////////
 ///////////////////////////////
 
-const mapsKey = "";
-const fruitversion = "v1.1.2";
+const mapsKey = "AIzaSyDH3HjD-8oLQlmJwJ61hNc7NzCTrl94QT4";
+const fruitversion = "v1.1.3";
 const itemList = [ 
 	["iphone", "iPhone 13", ], 
 	["iphold", "iPhone SE, 11, 12" ], 
@@ -81,7 +81,7 @@ class App extends React.Component {
 				const whichStore = this.state.storeRow.storeID;
 				const query = Object.keys(skuList).map((k, i) => `parts.${i}=${encodeURIComponent(k)}`).join("&") + `&searchNearby=false&store=${whichStore}`;
 
-				let response = Axios.get('https://cors-anywhere.herokuapp.com/https://apple.com/shop/fulfillment-messages?' + query, { headers: { 'X-Requested-With': 'XMLHttpRequest' } });
+				let response = Axios.get('https://cors-fruit.herokuapp.com/https://apple.com/shop/fulfillment-messages?' + query, { headers: { 'X-Requested-With': 'XMLHttpRequest' } });
 
 				myResolve(response);
 			}.bind(this));
