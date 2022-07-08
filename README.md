@@ -13,6 +13,6 @@ This app shows current availability for certain products at Apple stores in the 
 
 If the Google Maps view does not load completely for you, edit Line 18 of `./src/index.js` to include a valid key from https://cloud.google.com/maps-platform/ and enable the Maps Javascript API.
 
-Visit `https://cors-anywhere.herokuapp.com` and click the button to request temporary access to the CORS Anywhere service.
+Visit https://cors-anywhere.herokuapp.com and click the button to request temporary access to the CORS Anywhere service.
 
 An older stable version of this app running Express with Pug templating is in the `legacy-express` directory.
